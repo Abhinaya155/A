@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Aerodynamic Forces & Flight Simulation</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+ </head>
+ <body>
+     <header>
+         <h1>Aerodynamic forces and weather-based simulator </h1>
+     </header>
+ 
+     <section id="input-section">
+         <h2>Enter Flight Parameters</h2>
+         <label>Velocity (m/s): <input type="number" id="velocity" value="50"></label>
+         <label>Air Density (kg/m³): <input type="number" id="airDensity" value="1.225"></label>
+         <label>Wing Area (m²): <input type="number" id="wingArea" value="20"></label>
+         <label>Lift Coefficient: <input type="number" id="liftCoefficient" value="1.2"></label>
+         <label>Drag Coefficient: <input type="number" id="dragCoefficient" value="0.3"></label>
+         <label>Thrust (N): <input type="number" id="thrust" value="5000"></label>
+         <button onclick="calculateForces()">Calculate Forces</button>
+         <p id="result"></p>
+     </section>
+ 
+     <section id="weather-section">
+         <h2>Weather Conditions</h2>
+         <p id="weather-data">Fetching weather data...</p>
+     </section>
+ 
+     <section>
+      <label for="citySelect">🌍 Select City:</label>
+      <select id="citySelect">
+        <option value="28.6139,77.2090">Delhi</option>
+        <option value="19.0760,72.8777">Mumbai</option>
+        <option value="12.9716,77.5946">Bangalore</option>
+        <option value="17.3850,78.4867">Hyderabad</option>
+</select>
+
+      </select>
+      <div id="canvas-container">
+        <canvas id="weatherCanvas" width="400" height="300"></canvas>
+      </div>
+        
+         
+       </section>
+   
+       <section>
+        <h2>🌦 Weather Inputs</h2>
+         <label>Wind Speed (m/s): <input type="range" id="windSpeed" min="0" max="100" value="10"> <span id="windSpeedVal">10</span></label><br>
+         <label>Wind Direction (°): <input type="range" id="windDir" min="0" max="360" value="90"> <span id="windDirVal">90</span></label>
+        
+         <h2>🌬 2D Flight & Weather Visualization</h2>
+         <canvas id="flightCanvas" width="800" height="400"></canvas>
+         <main>
+         <section class="controls">
+           <label>Angle of Attack (°): <span id="aoaVal">5</span></label>
+           <input type="range" min="-10" max="20" value="5" id="aoaSlider">
+          </section>
+           <section class="visualization">
+            <canvas id="airflowCanvas" width="500" height="300"></canvas>
+          
+          
+         </section>
+     
+         
+     
+         
+       </main>
+ 
+     <script src="script.js"></script>
+     <script src="weather.js"></script>
+ </body>
+ <!-- Add this to your HTML -->
+
+<!-- Add this to your HTML -->
+
+
+
+
+ </html>

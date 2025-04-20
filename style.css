@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a8b9e1;
+    text-align: center;
+    font-size: 14px;
+  padding: 10px;
+  
+}
+
+header {
+    background: linear-gradient(to right, #003366, #0055a5);
+    color: white;
+    padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+    margin: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 66px 56px 80px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  font-size: 14px;
+  margin: 4px 0;
+    padding: 8px;
+    
+    width: 100px;
+}
+
+button {
+    background: #0055a5;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 4px 0;
+}
+.controls {
+    padding: 20px;
+    background: #e6f2ff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .controls label {
+    font-weight: bold;
+  }
+  #weatherCanvas {
+    border: 1px solid #003366;
+    background-color: #cde;
+    margin-top: 15px;
+    transition: background-color 1s ease;
+    border-radius: 4px;
+}
+
+  .visualization {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .results {
+    padding: 20px;
+    background: #dbefff;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+  
