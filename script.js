@@ -96,8 +96,11 @@ function drawFlightScene(lift, drag, thrust) {
   const thrustAngle = windAngle + Math.PI;
 
   // Forces
+ 
+  // Thrust reacts to wind direction + dynamic pulse
   drawArrow(ctx, centerX, centerY, lift / 10, -Math.PI / 2, "red", "Lift");
-  drawArrow(ctx, centerX, centerY, drag / 10, windAngle, "blue", "Drag");
+  drawArrow(ctx, centerX, centerY, drag / 10, Math.PI, "blue", "Drag");
+  
 
   // Thrust reacts to wind direction + dynamic pulse
   drawArrow(ctx, centerX + thrustPulse * Math.cos(thrustAngle), centerY + thrustPulse * Math.sin(thrustAngle),
@@ -105,6 +108,7 @@ function drawFlightScene(lift, drag, thrust) {
 
   drawArrow(ctx, centerX, centerY, windLength, -windAngle, "#666", "Wind");
 }
+
 
 
 
